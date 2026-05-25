@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İletişim | İlmek Dünyası</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <h1>İlmek Dünyası</h1>
+
+      <div class="hamburger-menu" id="hamburgerBtn">
+        <span></span><span></span><span></span>
+      </div>
+      <nav class="menu" id="navMenu">
+        <a href="../index.html">Ana Sayfa</a>
+        <a href="urunler.html">Ürünler</a>
+        <a href="sepet.html">Sepetim</a>
+        <a href="iletisim.html">İletişim</a>
+        <a href="oyun.html">Mini Oyun</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="iletisim-kapsayici">
+        <div class="iletisim-sol">
+          <h2>İletişim Bilgilerimiz</h2>
+          <p>
+            Bize her zaman aşağıdaki kanallardan ulaşabilirsiniz. En kısa sürede
+            dönüş yapmaktan mutluluk duyarız!
+          </p>
+
+          <div class="bilgi-kartlari">
+            <div class="bilgi-satir">
+              <strong>📍 Adres:</strong>
+              <span>Düzce</span>
+            </div>
+            <div class="bilgi-satir">
+              <strong>✉️ E-posta:</strong>
+              <span>iletisim@ilmekdunyasi.com</span>
+            </div>
+            <div class="bilgi-satir">
+              <strong>📸 Instagram:</strong>
+              <span>ilmek.dunyasi</span>
+            </div>
+            <div class="bilgi-satir">
+              <strong>⏰ Çalışma Saatleri:</strong>
+              <span>Hafta İçi: 09:00 - 18:00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="iletisim-sag">
+          <h2>Bize Yazın</h2>
+
+          <form id="iletisimFormu">
+            <div class="form-grup">
+              <label for="adSoyad">Adınız Soyadınız:</label>
+              <input
+                type="text"
+                id="adSoyad"
+                placeholder="Lütfen adınızı giriniz..."
+                required
+              />
+            </div>
+
+            <div class="form-grup">
+              <label for="email">E-posta Adresiniz:</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="ornek@eposta.com"
+                required
+              />
+            </div>
+
+            <div class="form-grup">
+              <label for="konu">İletişim Nedeni:</label>
+              <select id="konu" required>
+                <option value="" disabled selected>
+                  Lütfen bir neden seçiniz...
+                </option>
+                <option value="siparis">Özel Amigurumi Siparişi</option>
+                <option value="bilgi">Fiyatlar / Ürünler Hakkında Bilgi</option>
+                <option value="oneri">Öneri / Şikayet</option>
+                <option value="diger">Diğer</option>
+              </select>
+            </div>
+
+            <div class="form-grup">
+              <label for="mesajMetni">Mesajınız:</label>
+              <textarea
+                id="mesajMetni"
+                rows="5"
+                placeholder="Mesajınızı buraya yazabilirsiniz..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-grup">
+              <button type="reset" class="btn-incele btn-temizle">
+                Temizle
+              </button>
+              <button type="submit" class="btn-incele">Gönder</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 İlmek Dünyası | Yönetim Bilişim Sistemleri</p>
+    </footer>
+
+    <button id="yukariCikBtn" class="yukari-cik-btn">↑</button>
+
+    <script src="../scripts/myscripts.js"></script>
+  </body>
+</html>

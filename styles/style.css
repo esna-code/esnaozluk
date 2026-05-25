@@ -1,0 +1,610 @@
+/* ==========================================================================
+   1. SAYFA GENEL AYARLARI
+   ========================================================================== */
+body {
+  background-color: #fcfbfa;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+section {
+  padding: 20px;
+}
+
+h2 {
+  color: #70566c;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #e7c6ff;
+  margin: 10px 20px;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVBAR TASARIMI
+   ========================================================================== */
+header {
+  background-color: #e2e2f0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  color: #4a4e69;
+  font-size: 24px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+/* Menü Linkleri */
+.menu a {
+  text-decoration: none;
+  color: #4a4e69;
+  margin-left: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* 🎯 DÜZELTME: Prettier hatasına neden olan tekil eğik çizgi (/) temizlendi */
+.menu a:hover {
+  color: #8c6a9f;
+}
+
+/* Hamburger Menü Butonu (Masaüstünde Gizli) */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #4a4e69;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   3. ÜRÜN KARTLARI VE LİSTELEME
+   ========================================================================== */
+.urun-listesi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 10px;
+}
+
+.urun-kart {
+  background-color: white;
+  border: 1px solid #f0e6ef;
+  border-radius: 15px;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(205, 180, 219, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.urun-kart:hover {
+  transform: scale(1.03);
+}
+
+.urun-kart img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* Butonlar */
+.btn-incele {
+  background-color: #cdb4db;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.btn-incele:hover {
+  background-color: #a2d2ff;
+  color: white;
+}
+
+/* ==========================================================================
+   4. FOOTER
+   ========================================================================== */
+footer {
+  background-color: #e2e2f0;
+  color: #4a4e69;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   5. MOBİL UYUMLULUK (RESPONSIVE)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  header {
+    justify-content: space-between;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #e2e2f0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .menu.aktif {
+    display: flex;
+  }
+
+  .menu a {
+    display: block;
+    padding: 14px;
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(74, 78, 105, 0.1);
+  }
+
+  .urun-listesi {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .urun-kart {
+    width: 85%;
+  }
+}
+
+/* ==========================================================================
+   6. YUKARI ÇIK BUTONU TASARIMI
+   ========================================================================== */
+.yukari-cik-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  background-color: #cdb4db;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 41px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(205, 180, 219, 0.3);
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.yukari-cik-btn:hover {
+  background-color: #a2d2ff;
+  transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   7. ÜRÜN DETAY SAYFASI TASARIMI (FLEXBOX)
+   ========================================================================== */
+.urun-detay {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid #f0e6ef;
+  box-shadow: 0 4px 15px rgba(205, 180, 219, 0.05);
+}
+
+.urun-gorsel img {
+  width: 280px;
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.urun-bilgi {
+  flex: 1;
+  min-width: 280px;
+  max-width: 450px;
+}
+
+.urun-bilgi .fiyat {
+  font-size: 22px;
+  font-weight: bold;
+  color: #695376;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.urun-bilgi p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.urun-adet {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.urun-adet label {
+  font-weight: bold;
+  color: #4a4e69;
+}
+
+.urun-adet input[type="number"] {
+  width: 55px;
+  padding: 6px;
+  border: 1px solid #cdb4db;
+  border-radius: 6px;
+  text-align: center;
+  color: #4a4e69;
+  font-weight: bold;
+}
+
+#mesaj {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #70566c;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .urun-detay {
+    flex-direction: column;
+    text-align: center;
+    margin: 15px;
+    padding: 20px;
+  }
+
+  .urun-gorsel img {
+    width: 75%;
+  }
+
+  .urun-adet {
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   8. SEPET SAYFASI
+   ========================================================================== */
+.sepet-alani {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#sepetTablosu {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(205, 180, 219, 0.05);
+}
+
+#sepetTablosu th,
+#sepetTablosu td {
+  border: 1px solid #f0e6ef;
+  padding: 15px;
+  text-align: center;
+  color: #555;
+}
+
+#sepetTablosu th {
+  background-color: #e2e2f0;
+  color: #4a4e69;
+  font-weight: bold;
+}
+
+#sepetTablosu td img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.sepet-toplam {
+  text-align: right;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4a4e69;
+}
+
+.sepet-butonlar {
+  text-align: right;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* ==========================================================================
+   9. SEPET SAYFASI MOBİL GÖRÜNÜM (RESPONSIVE)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  #sepetTablosu thead {
+    display: none;
+  }
+
+  #sepetTablosu,
+  #sepetTablosu tbody,
+  #sepetTablosu tr {
+    display: block;
+    width: 100%;
+  }
+
+  #sepetTablosu tr {
+    background: white;
+    border: 1px solid #f0e6ef;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+  }
+
+  #sepetTablosu td {
+    display: block;
+    text-align: center;
+    padding: 8px 0;
+    border: none;
+    font-size: 14px;
+  }
+
+  #sepetTablosu td img {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  #sepetTablosu td .btn-incele,
+  #sepetTablosu td .btn-incele:hover {
+    width: 80%;
+    margin: 5px auto 0 auto;
+    background-color: #e63946 !important;
+    color: white !important;
+    padding: 8px;
+    display: block;
+  }
+
+  .sepet-toplam,
+  .sepet-butonlar {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   10. İLETİŞİM SAYFASI YAN YANA (FLEXBOX) VE FORM TASARIMI
+   ========================================================================== */
+.iletisim-kapsayici {
+  display: flex;
+  max-width: 1000px;
+  margin: 40px auto;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.iletisim-sol,
+.iletisim-sag {
+  flex: 1;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #f0e6ef;
+  box-shadow: 0 4px 15px rgba(205, 180, 219, 0.04);
+  box-sizing: border-box;
+}
+
+.iletisim-sol p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.bilgi-kartlari {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bilgi-satir {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  background-color: #fcfbfa;
+  border-left: 4px solid #cdb4db;
+  border-radius: 4px;
+}
+
+.bilgi-satir strong {
+  color: #4a4e69;
+  font-size: 14px;
+}
+
+.bilgi-satir span {
+  color: #666;
+  font-size: 13px;
+}
+
+#iletisimFormu {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-grup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.form-grup label {
+  font-weight: bold;
+  color: #4a4e69;
+  font-size: 13px;
+}
+
+.form-grup input[type="text"],
+.form-grup input[type="email"],
+.form-grup select,
+.form-grup textarea {
+  padding: 12px;
+  border: 1px solid #cdb4db;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  color: #4a4e69;
+  background-color: #fcfbfa;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.form-grup input:focus,
+.form-grup select:focus,
+.form-grup textarea:focus {
+  border-color: #a2d2ff;
+  box-shadow: 0 0 8px rgba(162, 210, 255, 0.4);
+}
+
+.form-butonlar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.form-butonlar .btn-incele {
+  width: auto;
+  padding: 10px 25px;
+  font-size: 14px;
+}
+
+.btn-temizle {
+  background-color: #b599c2;
+}
+
+.btn-temizle:hover {
+  background-color: #9c7ba8;
+}
+
+@media screen and (max-width: 768px) {
+  .iletisim-kapsayici {
+    flex-direction: column;
+    margin: 20px auto;
+  }
+
+  .form-butonlar {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  .form-butonlar .btn-incele {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   11. MİNİ OYUN TASARIMI
+   ========================================================================== */
+.oyun-alani {
+  text-align: center;
+  padding: 30px;
+}
+
+.oyun-bilgileri {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px 0;
+  color: #70566c;
+}
+
+.kutu-alani {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  gap: 20px;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.kutu {
+  width: 120px;
+  height: 120px;
+  background-color: #f8f4ff;
+  border: 2px solid #cdb4db;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.kutu:hover {
+  transform: scale(1.05);
+  background-color: #efe7ff;
+}
+
+@media screen and (max-width: 768px) {
+  .kutu-alani {
+    grid-template-columns: repeat(2, 120px);
+  }
+}

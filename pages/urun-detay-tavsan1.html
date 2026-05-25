@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ürün Detay | İlmek Dünyası</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <h1>İlmek Dünyası</h1>
+      <div class="hamburger-menu" id="hamburgerBtn">
+        <span></span><span></span><span></span>
+      </div>
+      <nav class="menu" id="navMenu">
+        <a href="../index.html">Ana Sayfa</a>
+        <a href="urunler.html">Ürünler</a>
+        <a href="sepet.html">Sepetim</a>
+        <a href="iletisim.html">İletişim</a>
+        <a href="oyun.html">Mini Oyun</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="urun-detay">
+        <div class="urun-gorsel">
+          <img src="../img/tavsan1.png" alt="Amigurumi Tavşan 1" />
+        </div>
+        <div class="urun-bilgi">
+          <h2>Amigurumi Tavşan Oyuncak</h2>
+          <p class="fiyat">450 TL</p>
+          <p>
+            El yapımı amigurumi tavşan oyuncak, çocuk sağlığına uygun kaliteli
+            iplerle sevgiyle örülmüştür.
+          </p>
+          <div class="urun-adet">
+            <label for="adet">Adet:</label>
+            <input type="number" id="adet" min="1" value="1" />
+          </div>
+          <button class="btn-incele" id="btnSepeteEkle">Sepete Ekle</button>
+          <p id="mesaj"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer><p>© 2026 İlmek Dünyası | Yönetim Bilişim Sistemleri</p></footer>
+    <button id="yukariCikBtn" class="yukari-cik-btn">↑</button>
+    <script src="../scripts/myscripts.js"></script>
+  </body>
+</html>

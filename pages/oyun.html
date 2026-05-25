@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Oyun | İlmek Dünyası</title>
+
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="navbar">
+      <h1>İlmek Dünyası</h1>
+
+      <div class="hamburger-menu" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="menu" id="navMenu">
+        <a href="../index.html">Ana Sayfa</a>
+        <a href="urunler.html">Ürünler</a>
+        <a href="sepet.html">Sepetim</a>
+        <a href="iletisim.html">İletişim</a>
+        <a href="oyun.html">Mini Oyun</a>
+      </nav>
+    </header>
+
+    <!-- ANA İÇERİK -->
+    <main>
+      <section class="oyun-alani">
+        <h2>🐰 Tavşanı Yakala Oyunu</h2>
+
+        <p>Süre bitmeden mümkün olduğunca fazla tavşan yakalamaya çalış!</p>
+
+        <!-- SKOR VE SÜRE -->
+        <div class="oyun-bilgileri">
+          <h3>Skor: <span id="skor">0</span></h3>
+
+          <h3>Süre: <span id="sure">30</span></h3>
+        </div>
+
+        <!-- OYUN KUTULARI -->
+        <div class="kutu-alani">
+          <div class="kutu"></div>
+          <div class="kutu"></div>
+          <div class="kutu"></div>
+          <div class="kutu"></div>
+          <div class="kutu"></div>
+          <div class="kutu"></div>
+        </div>
+
+        <!-- BAŞLAT BUTONU -->
+        <button class="btn-incele" id="btnOyunuBaslat">Oyunu Başlat</button>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 İlmek Dünyası | Yönetim Bilişim Sistemleri</p>
+    </footer>
+
+    <!-- YUKARI ÇIK -->
+    <button id="yukariCikBtn" class="yukari-cik-btn">↑</button>
+
+    <!-- JS -->
+    <script src="../scripts/myscripts.js"></script>
+  </body>
+</html>

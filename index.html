@@ -1,14 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esna'nın Sayfalarına Hoşgeldiniz</title>
-</head>
-<br><h1>Esna'nın web sayfalarına hoşgeldiniz...</h1> </br>
- 
- <a href="roman.html">ROMANLAR</a>
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İlmek Dünyası</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <h1>İlmek Dünyası</h1>
 
+      <div class="hamburger-menu" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-</body>
+      <nav class="menu" id="navMenu">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="pages/urunler.html">Ürünler</a>
+        <a href="pages/sepet.html">Sepetim</a>
+        <a href="pages/iletisim.html">İletişim</a>
+        <a href="pages/oyun.html">Mini Oyun</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Hoş Geldiniz</h2>
+        <p>
+          Bu sitede el yapımı örgü ürünler satılmaktadır. Tüm ürünler el
+          emeğidir.
+        </p>
+      </section>
+      <hr />
+
+      <section>
+        <h2>Öne Çıkan Ürünler</h2>
+
+        <div class="urun-listesi">
+          
+          <div class="urun-kart">
+            <img src="img/tavsan3.png" alt="Amigurumi Tavşan" />
+            <h3>Amigurumi Tavşan</h3>
+            <p class="fiyat">450 TL</p>
+            <a href="pages/urun-detay-tavsan3.html">
+              <button class="btn-incele">Ürünü İncele</button>
+            </a>
+          </div>
+
+          <div class="urun-kart">
+            <img src="img/tavsan2.png" alt="Amigurumi Tavşan" />
+            <h3>Amigurumi Tavşan</h3>
+            <p class="fiyat">450 TL</p>
+            <a href="pages/urun-detay-tavsan2.html">
+              <button class="btn-incele">Ürünü İncele</button>
+            </a>
+          </div>
+
+          <div class="urun-kart">
+            <img src="img/minikopek.png" alt="Amigurumi Köpek Anahtarlık" />
+            <h3>Köpek Anahtarlık</h3>
+            <p class="fiyat">300 TL</p>
+            <a href="pages/urun-detay-kopek.html">
+              <button class="btn-incele">Ürünü İncele</button>
+            </a>
+          </div>
+
+        </div>
+      </section>
+      <hr />
+
+      <section>
+        <h2>Hakkımızda</h2>
+        <p>
+          İlmek Dünyası küçük bir öğrenci projesidir. El yapımı ürünler
+          satılmaktadır.
+        </p>
+      </section>
+    </main>
+    <hr />
+
+    <footer>
+      <p>© 2026 İlmek Dünyası | Yönetim Bilişim Sistemleri</p>
+    </footer>
+
+    <button id="yukariCikBtn" class="yukari-cik-btn">↑</button>
+
+    <script src="scripts/myscripts.js"></script>
+  </body>
 </html>

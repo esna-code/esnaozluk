@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sepetim | İlmek Dünyası</title>
+
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <h1>İlmek Dünyası</h1>
+
+      <div class="hamburger-menu" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="menu" id="navMenu">
+        <a href="../index.html">Ana Sayfa</a>
+        <a href="urunler.html">Ürünler</a>
+        <a href="sepet.html">Sepetim</a>
+        <a href="iletisim.html">İletişim</a>
+        <a href="oyun.html">Mini Oyun</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Sepetim</h2>
+      </section>
+
+      <section class="sepet-alani">
+        <table id="sepetTablosu">
+          <thead>
+            <tr>
+              <th>Görsel</th>
+              <th>Ürün</th>
+              <th>Adet</th>
+              <th>Birim Fiyat</th>
+              <th>Toplam</th>
+              <th>Sil</th>
+            </tr>
+          </thead>
+
+          <tbody id="sepetBody"></tbody>
+        </table>
+      </section>
+
+      <section class="sepet-toplam">
+        <h3 id="genelToplam">Genel Toplam: 0 TL</h3>
+      </section>
+
+      <section class="sepet-butonlar">
+        <button class="btn-incele" id="btnSepetiTemizle">
+          Sepeti Temizle
+        </button>
+
+        <button class="btn-incele" id="btnAlisverisTamamla">
+          Alışverişi Tamamla
+        </button>
+      </section>
+      
+    </main>
+
+    <footer>
+      <p>© 2026 İlmek Dünyası | Yönetim Bilişim Sistemleri</p>
+    </footer>
+
+    <script src="../scripts/myscripts.js"></script>
+  </body>
+</html>
